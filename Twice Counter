@@ -1,0 +1,17 @@
+class Solution {
+  public:
+    int countWords(vector<string> &list) {
+        // code here.
+        int count=0;
+        map<string,int>mp;
+        for(int i=0;i<list.size();i++){
+            mp[list[i]]++;
+        }
+        for(auto i: mp){
+            if(i.second==2){
+                count++;
+            }
+        }
+        return count;
+    }
+};
