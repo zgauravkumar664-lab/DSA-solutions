@@ -1,0 +1,12 @@
+class Solution {
+	public:
+	int setKthBit(int n, int k) {
+		// Code here
+		int x = n;
+		int bit = (x>> k)&1;
+		if (bit == 0) {
+			x = x + pow(2, k);
+		}
+		return x;
+	}
+};
