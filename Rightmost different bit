@@ -1,0 +1,22 @@
+class Solution {
+	public:
+	int posOfRightMostDiffBit(int m, int n) {
+		//  code here
+		int x = m^n;
+		int position = 1;
+		if (x == 0) {
+			return - 1;
+		}
+		while (x>0) {
+			int bit = x&1;
+			if (bit != 0) {
+				return position;
+			}
+			else {
+				position++;
+			}
+			x = x>> 1;
+		}
+		
+	}
+};
