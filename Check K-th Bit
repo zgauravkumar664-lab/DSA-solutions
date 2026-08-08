@@ -1,0 +1,16 @@
+class Solution {
+	public:
+	bool checkKthBit(int n, int k) {
+		//  code here
+		// return(n>>k)&1;
+		
+		while (n>0) {
+			int bit = n&1;
+			bit>> k;
+			if (bit != 0) {
+				return true;
+			}
+		}
+		return false;
+	}
+};
